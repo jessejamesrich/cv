@@ -1,0 +1,18 @@
+/** @format */
+
+#root {
+	min-height: 100vh;
+}
+body[data-overflow="hidden"] {
+	overflow: hidden;
+}
+body[data-overflow="x"] {
+	overflowx: scroll;
+}
+body[data-overflow="y"] {
+	overflowy: scroll;
+}
+body[data-overflow="xy"],
+body[data-overflow="yx"] {
+	overflow: scroll;
+}
