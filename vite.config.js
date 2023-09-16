@@ -22,5 +22,31 @@ export default defineConfig(() => {
 		base: "/",
 		clearScreen: true,
 		plugins: [react()],
+		serve: {
+			port: 3000,
+			https: {
+				key: fs.readFileSync(path.resolve(__dirname, ".cert/key.pem")),
+				cert: fs.readFileSync(path.resolve(__dirname, ".cert/cert.pem")),
+			},
+		},
+		preview: {
+			port: 3000,
+			https: true,
+		},
+		server: {
+			port: 3000,
+			strictPort: true,
+			// hmr: { overlay: false, protocol: "wss" },
+			https: {
+				key: fs.readFileSync(path.resolve(__dirname, ".cert/key.pem")),
+				cert: fs.readFileSync(path.resolve(__dirname, ".cert/cert.pem")),
+			},
+			proxy: {
+				"/api": {
+					target: root + "/functions/",
+					changeOrigin: true,
+				},
+			},
+		},
 	};
 });
