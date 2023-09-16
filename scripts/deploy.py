@@ -6,12 +6,7 @@ import json
 with open("scripts/config/deploy.json", "r") as deploy_config_file:
     deploy_config = json.load(deploy_config_file)
 
-personal_access_key = deploy_config.get("key")
 repo_name = deploy_config.get("repo")
-
-if not personal_access_key:
-    print("Error: Personal access key not found in config/deploy.json")
-    exit(1)
 
 if not repo_name:
     print("Error: Repo not found in config/deploy.json")
