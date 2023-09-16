@@ -1,7 +1,8 @@
 /** @format */
 
 import react from "@vitejs/plugin-react";
-import { resolve } from "path";
+import fs from "fs";
+import path, { resolve } from "path";
 import { defineConfig } from "vite";
 
 export default defineConfig(() => {
@@ -23,18 +24,18 @@ export default defineConfig(() => {
 		clearScreen: true,
 		plugins: [react()],
 		serve: {
-			port: 3000,
+			port: 8055,
 			https: {
 				key: fs.readFileSync(path.resolve(__dirname, ".cert/key.pem")),
 				cert: fs.readFileSync(path.resolve(__dirname, ".cert/cert.pem")),
 			},
 		},
 		preview: {
-			port: 3000,
+			port: 8055,
 			https: true,
 		},
 		server: {
-			port: 3000,
+			port: 8055,
 			strictPort: true,
 			// hmr: { overlay: false, protocol: "wss" },
 			https: {

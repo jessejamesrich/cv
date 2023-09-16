@@ -23,7 +23,7 @@
 	"name": "jjr",
 	"scripts": {
 		"build": "vite build",
-		"deploy": "python3 scripts/deploy.py",
+		"commit": "python3 scripts/commit.py",
 		"dev": "vite",
 		"locales": "python3 packages/locales/scripts/build.py",
 		"observer": "python3 scripts/observer.py",

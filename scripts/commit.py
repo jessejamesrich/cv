@@ -3,7 +3,7 @@ import subprocess
 import json
 
 # Load the personal access key from config/deploy.json
-with open("scripts/config/deploy.json", "r") as deploy_config_file:
+with open("scripts/config/commit.json", "r") as deploy_config_file:
     deploy_config = json.load(deploy_config_file)
 
 repo_name = deploy_config.get("repo")
