@@ -28,7 +28,8 @@
 		"locales": "python3 packages/locales/scripts/build.py",
 		"observer": "python3 scripts/observer.py",
 		"readme": "python3 packages/readme/scripts/build.py",
-		"serve": "vite preview",
+		"serve:development": "python3 scripts/serve.py development",
+		"serve:production": "python3 scripts/serve.py production",
 		"test": "vitest",
 		"version": "python3 packages/version/scripts/build.py"
 	},
