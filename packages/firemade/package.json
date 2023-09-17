@@ -1,0 +1,12 @@
+{
+	"author": "jessejamesrich",
+	"description": "An adapter made to config'd and init Firebase",
+	"keywords": [],
+	"license": "ISC",
+	"main": "src/index.js",
+	"name": "firemade",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"version": "1.0.0"
+}

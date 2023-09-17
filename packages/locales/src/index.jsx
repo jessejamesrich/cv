@@ -6,6 +6,8 @@ import config from "./config/index.json";
 
 import TestContext from "./.tests/context.jsx";
 
+import Menu from "./components/Menu";
+
 const LocalesContext = createContext({});
 
 class Locales extends PureComponent {
@@ -18,6 +20,7 @@ class Locales extends PureComponent {
 	setup = async () => {
 		try {
 			const enabledLanguages = config.supported.filter((lang) => lang.enabled);
+
 			const files = await Promise.all(
 				enabledLanguages.map(async (lang) => {
 					const { code } = lang;
@@ -29,7 +32,6 @@ class Locales extends PureComponent {
 			// Transform the array into an object for i18next
 			const resources = Object.assign({}, ...files);
 
-			// ... (Rest of the i18n setup code remains unchanged)
 			this.supported = enabledLanguages.map((lang) => lang.code); // Only store the codes
 
 			if (!this.state.ready) {
@@ -58,11 +60,15 @@ class Locales extends PureComponent {
 			try {
 				if (this.supported.includes(locale)) {
 					// set a cookie here if you wanna
-					this.setState({ locale }, () => resolve(true));
+					this.setState({ locale }, () => {
+						i18n.changeLanguage(locale);
+						resolve(true);
+					});
 				} else {
 					resolve(false); // Locale not supported
 				}
 			} catch (e) {
+				// A nice little error handle/snackbard if what I normally use on errors
 				reject(e);
 			}
 		});
@@ -76,69 +82,6 @@ class Locales extends PureComponent {
 		return this.supported.map((locale) => ({ ...locale, selected: locale.code == this.state.locale }));
 	};
 
-	getLocalizedUrl = (path) => {
-		if (!path || path == "" || path == "/") return "";
-
-		const localeCode = this.state.locale || config.default; // Assuming locales.get() returns the required locale code
-
-		// Check if the path starts with a locale code using regex pattern matching
-		const matches = path.match(/^\/[a-z]{2}-[a-z]{2}\//);
-		if (matches) {
-			// If a locale code is found at the beginning of the path, replace it with the new one
-			path = path.replace(matches[0], `/${localeCode}/`);
-		} else {
-			// If no locale code is found at the beginning, prepend the new locale code
-			path = `/${localeCode}/${path}`;
-		}
-
-		// Ensure there are no double forward slashes
-		path = path.replace(/\/{2,}/g, "/");
-
-		// Remove any trailing forward slashes
-		path = path.replace(/\/$/, "");
-
-		return path;
-	};
-
-	getParamizedUrl = (path) => {
-		if (!path || path == "" || path == "/") return "";
-
-		const localeCode = this.state.locale || config.default; // Assuming locales.get() returns the required locale code
-
-		// Check if the path starts with a locale code using regex pattern matching
-		const matches = path.match(/^\/[a-z]{2}-[a-z]{2}\//);
-		if (matches) {
-			// If a locale code is found at the beginning of the path, replace it with the new one
-			path = path.replace(matches[0], `/${localeCode}/`);
-		} else {
-			// If no locale code is found at the beginning, prepend the new locale code
-			path = `/:locale/${path}`;
-		}
-
-		// Ensure there are no double forward slashes
-		path = path.replace(/\/{2,}/g, "/");
-
-		// Remove any trailing forward slashes
-		path = path.replace(/\/$/, "");
-
-		return path;
-	};
-
-	functions = () => {
-		return {
-			t: this.t,
-			set: this.setLocale,
-			locale: {
-				get: this.getLocale,
-			},
-			locales: {
-				get: this.getLocales,
-			},
-			url: this.getLocalizedUrl,
-			paramize: this.getParamizedUrl,
-		};
-	};
-
 	componentDidMount() {
 		this.setup();
 	}
@@ -150,7 +93,15 @@ class Locales extends PureComponent {
 	render() {
 		return (
 			<I18nextProvider i18n={i18n}>
-				<LocalesContext.Provider value={{ ...this.state, ...this.functions() }}>
+				<LocalesContext.Provider
+					value={{
+						...this.state,
+						t: this.t,
+						get: this.getLocale,
+						set: this.setLocale,
+						enabled: this.getLocales,
+					}}
+				>
 					{this.state.ready && this.props.children}
 				</LocalesContext.Provider>
 			</I18nextProvider>
@@ -171,4 +122,4 @@ const useLocales = () => {
 };
 
 export default Locales;
-export { TestContext, useLocales, withLocales };
+export { Menu, TestContext, useLocales, withLocales };

@@ -1,3 +1,18 @@
 {
-	"placeholder": "Je fais des trucs de code bien la plupart du temps !!!"
+	"close": "Closefr",
+	"continue": "Continuefr",
+	"darkModeButton": "Dark Modefr",
+	"darkModeMessage": "Are you sure you want to switch to dark mode?fr",
+	"darkModeTitle": "Switch to Dark Modefr",
+	"download": "Downloadfr",
+	"emailMe": "Email Mefr",
+	"lightModeButton": "Light Mode",
+	"lightModeMessage": "Are you sure you want to switch to light mode?fr",
+	"lightModeTitle": "Switch to Light Modefr",
+	"placeholder": "I do code stuff good mostly!!fr",
+	"threads": "Threadsfr",
+	"topBarCV": "CVfr",
+	"topbarAbout": "About Mefr",
+	"topbarHome": "Homefr",
+	"topbarTitle": "Here's what I'm working on...fr"
 }

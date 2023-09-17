@@ -1,0 +1,13 @@
+{
+	"author": "jessejamesrich",
+	"description": "MUI React UI Wrapper",
+	"keywords": [],
+	"license": "ISC",
+	"main": "src/index.jsx",
+	"name": "ui",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"type": "module",
+	"version": "1.0.0"
+}

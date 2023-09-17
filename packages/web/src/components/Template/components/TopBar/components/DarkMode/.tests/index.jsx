@@ -1,7 +1,7 @@
 /** @format */
 import { cleanup, render } from "@testing-library/react";
 import { TestContext } from "app";
-import Test from "../index.jsx";
+import Test from "../../../../../index.jsx";
 
 // Teardown
 afterEach(() => {

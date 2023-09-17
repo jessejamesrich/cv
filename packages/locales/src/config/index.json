@@ -1,27 +1,27 @@
 {
-  "deepl": {
-    "enabled": false,
-    "key": "da94b763-932a-f683-bc47-e981f4d393e0"
-  },
-  "default": "en-us",
-  "supported": [
-    {
-      "code": "en-us",
-      "enabled": true,
-      "name": "English",
-      "visible": true
-    },
-    {
-      "code": "fr-fr",
-      "enabled": true,
-      "name": "French",
-      "visible": true
-    },
-    {
-      "code": "es-es",
-      "enabled": false,
-      "name": "Spanish",
-      "visible": false
-    }
-  ]
+	"deepl": {
+		"enabled": true,
+		"key": "da94b763-932a-f683-bc47-e981f4d393e0"
+	},
+	"default": "en-us",
+	"supported": [
+		{
+			"code": "en-us",
+			"enabled": true,
+			"name": "English",
+			"visible": true
+		},
+		{
+			"code": "fr-fr",
+			"enabled": true,
+			"name": "French",
+			"visible": true
+		},
+		{
+			"code": "es-es",
+			"enabled": true,
+			"name": "Spanish",
+			"visible": true
+		}
+	]
 }
