@@ -1,6 +1,6 @@
 {
 	"author": "jessejamesrich",
-	"description": "An adapter made to config'd and init Firebase",
+	"description": "An adapter made to config and init Firebase",
 	"keywords": [],
 	"license": "ISC",
 	"main": "src/index.js",
@@ -8,5 +8,5 @@
 	"scripts": {
 		"test": "vitest"
 	},
-	"version": "1.0.0"
+	"version": "1.0.10"
 }

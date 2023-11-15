@@ -1,1 +1,26 @@
-{"close": "Close", "continue": "Continue", "darkModeButton": "Dark Mode", "darkModeMessage": "Are you sure you want to switch to dark mode?", "darkModeTitle": "Switch to Dark Mode", "download": "Download", "emailMe": "Email Me", "lightModeButton": "Light Mode", "lightModeMessage": "Are you sure you want to switch to light mode?", "lightModeTitle": "Switch to Light Mode", "threads": "Threads", "topBarCV": "CV", "topbarAbout": "About Me", "topbarHome": "Home", "topbarTitle": "Here's what I'm working on...", "topbarWhat": "What is this thing?", "what": "What", "whatIsThisBody": "Hey there, code explorer extraordinaire! Welcome to the not-so-glamorous but oh-so-functional test website. I promise it won't win any beauty contests, but it serves a noble purpose: letting you dive headfirst into the juicy world of our code repository. \ud83d\ude80 Think of it as the unpolished gemstone that hides a treasure trove of coding brilliance. This website is like the slightly wrinkled map to the buried treasure, and that treasure? Well, it's our repository, where the real magic happens. Why am I here? Simple. I want you to see how I craft code. No frills, no fluff, just the raw, unadulterated essence of our programming prowess.  So, grab your virtual shovel, put on your code-exploration hat, and let's embark on this adventure together. There's no craziness here, just a straightforward way to dive into the world of code review. So, what are you waiting for? Click around, explore, and maybe even uncover some code gems along the way. Happy coding! \ud83d\udcbb\ud83d\udd75\ufe0f\u200d\u2642\ufe0f", "who": "Who"}
+{
+	"aboutThisSite": "About This Site",
+	"contactJesse": "Contact Jesse",
+	"darkModeButton": "Dark Mode",
+	"darkModeMessage": "Are you sure you want to switch to dark mode?",
+	"darkModeTitle": "Switch to Dark Mode",
+	"download": "Download",
+	"emailMe": "Email Me",
+	"hireLong": "Looking to hire?",
+	"hireShort": "Hire Me",
+	"lemmeSee": "Show me!!",
+	"lightModeButton": "Light Mode",
+	"lightModeMessage": "Are you sure you want to switch to light mode?",
+	"lightModeTitle": "Switch to Light Mode",
+	"skip": "Skip",
+	"threads": "Threads",
+	"topBarCV": "CV",
+	"topbarAbout": "About This Site",
+	"topbarHome": "Home",
+	"topbarTitle": "Here's what I'm working on...",
+	"topbarWhat": "What is this thing?",
+	"videoIntro": "I designed and developed the project showed in the following video. My work included everything, and I mean everything. The frontend and backend in React and Node respectively. The application and website. A supporting CMS, loadbalancing, CDN, secrets manager and more. The branding, the ux and ui, the videos, images and more. The application uses all the standards you would expect from a large company and is built to scale. I've made this video to highlight my skillset and why I'm right for a job in this field. So, I encourage you to take a look at it...",
+	"what": "What",
+	"whatIsThisBody": "Hey there, code explorer extraordinaire! Welcome to the not-so-glamorous but oh-so-functional test website. I promise it won't win any beauty contests, but it serves a noble purpose: letting you dive headfirst into the juicy world of our code repository. 🚀 Think of it as the unpolished gemstone that hides a treasure trove of coding brilliance. This website is like the slightly wrinkled map to the buried treasure, and that treasure? Well, it's our repository, where the real magic happens. Why am I here? Simple. I want you to see how I craft code. No frills, no fluff, just the raw, unadulterated essence of our programming prowess.  So, grab your virtual shovel, put on your code-exploration hat, and let's embark on this adventure together. There's no craziness here, just a straightforward way to dive into the world of code review. So, what are you waiting for? Click around, explore, and maybe even uncover some code gems along the way. Happy coding! 💻🕵️‍♂️",
+	"who": "Who"
+}

@@ -22,7 +22,7 @@ class UIProvider extends Component {
 		this.state = {
 			ready: false,
 			dialogs: [],
-			mode: getCookie("mui_mode") || "dark",
+			mode: getCookie("mui_mode") || "light",
 		};
 		// Dialog controller
 		this.dialog = {

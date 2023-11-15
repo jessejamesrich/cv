@@ -1,24 +1,35 @@
 /** @format */
-import { Box, useTheme } from "@mui/material";
+import { Box, Divider, useTheme } from "@mui/material";
 import axios from "axios";
+import { useLocales } from "locales";
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
+import ContactCard from "../../../ContactCard";
 
 export default function CV() {
 	const { palette } = useTheme();
 	const [markdown, setMarkdown] = useState("");
+	const { locale } = useLocales();
 
+	// Load the markdown from the backend as an example
 	useEffect(() => {
-		axios.get("/api/md").then(({ data }) => {
+		// Send the ajax request
+		axios.post("/api/md", { section: "cv", locale: locale }).then(({ data }) => {
+			// Extract the markdown from the response
 			const md = data.data;
+
+			// set the markdown to show in the page
 			setMarkdown(md);
 		});
-	}, []);
-
-	console.log(palette, "~18");
+		// Add a dependancy on locale in case it changes
+	}, [locale]);
 
 	return (
 		<>
+			<ContactCard size="large" />
+
+			<Divider />
+
 			{markdown && (
 				<Box
 					component="blockquote"

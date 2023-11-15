@@ -1,12 +1,12 @@
 {
-	"author": "@jessjamesrich",
-	"description": "Version collator for sentry and console.",
-	"keywords": [],
-	"license": "ISC",
-	"main": "src/index.js",
-	"name": "version",
-	"scripts": {
-		"test": "vitest"
-	},
-	"version": "1.0.0"
+  "author": "@jessjamesrich",
+  "description": "Version collator for sentry and console.",
+  "keywords": [],
+  "license": "ISC",
+  "main": "src/index.js",
+  "name": "version",
+  "scripts": {
+    "test": "vitest"
+  },
+  "version": "1.0.21"
 }

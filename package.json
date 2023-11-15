@@ -8,12 +8,15 @@
 		"@fortawesome/free-brands-svg-icons": "^6.4.2",
 		"@fortawesome/free-solid-svg-icons": "^6.4.2",
 		"@fortawesome/react-fontawesome": "^0.2.0",
+		"@mui/lab": "^5.0.0-alpha.153",
 		"@mui/material": "^5.14.9",
 		"@testing-library/react": "^14.0.0",
 		"@vitejs/plugin-react": "^4.0.4",
 		"axios": "^1.5.0",
+		"esm": "^3.2.25",
 		"firebase": "^10.4.0",
 		"happy-dom": "^11.0.6",
+		"js-cookie": "^3.0.5",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-markdown": "^8.0.7",
@@ -26,7 +29,7 @@
 		"update": "^0.7.4",
 		"vite-bundle-visualizer": "^0.11.0"
 	},
-	"description": "",
+	"description": "My Test Monorepo",
 	"devDependencies": {
 		"vite": "^4.4.9",
 		"vite-plugin-markdown": "^2.1.0",
@@ -39,9 +42,12 @@
 	"scripts": {
 		"build": "vite build",
 		"commit": "python3 scripts/commit.py",
+		"deploy": "npm run build && firebase deploy && npm run logs",
 		"dev": "vite",
 		"locales": "python3 packages/locales/scripts/build.py",
+		"logs": "python3 scripts/logs.py",
 		"observer": "python3 scripts/observer.py",
+		"prededupe": "echo 'dedupe conflicts with Firebase Functions (backend) and should not be run.' && exit 1",
 		"readme": "python3 packages/readme/scripts/build.py",
 		"serve:development": "python3 scripts/serve.py development",
 		"serve:production": "python3 scripts/serve.py production",
@@ -50,7 +56,7 @@
 		"visualize": "vite build && npx vite-bundle-visualizer"
 	},
 	"type": "module",
-	"version": "1.0.0",
+	"version": "1.0.20",
 	"workspaces": [
 		"packages/*"
 	]

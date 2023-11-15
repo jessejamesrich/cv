@@ -10,8 +10,6 @@ export default function () {
 	return (
 		<Button
 			onClick={mode.toggle}
-			color="success"
-			variant="contained"
 			size="small"
 			aria-label="dark-mode"
 			sx={{ minHeight: "30px", maxWidth: "0px" }}

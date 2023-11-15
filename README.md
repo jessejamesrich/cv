@@ -1,82 +1,11 @@
-#
-## TOC
-[locales](#locales)
-[version](#version)
-[web](#web)
-#
-<a name="locales"></a>
 <!-- @format -->
 
-# Locales
+I've crafted a simple showcase of my abilities in the form of this demo site, and I've made the repository available for download at [GitHub](https://github.com/jessejamesrich/cv).
 
-Locales is an i18n adapter to use collated localization files saved closest to source. Locales highlights design patterns, observers, sub-packaging, and build scripts.
+This project elegantly demonstrates my skills across various domains of web development. From the front-end build using React, to the back-end powered by Node.js. It includes a REST API, a database, localization, and will grow as I continue to add to it.
 
-## Installation
+This site is meant to be simple and showcase just the basics. The single largest project I have worked on is at [https://made.live](https://made.live), the scope of which should really highlight my abilities as a programmer. I encourage you to check out the features video for more information about my abilities.
 
-Well, I dunno if you need to install this, but if you do, I bet you know how.
+Unfortunately, I do not speak either French or Spanish. The implementation of these languages is merely to show that localization is something I've worked on.
 
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first
-to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
-
-## Contact
-
-junk-relay@jessejamesrichard.com
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
-
-#
-<a name="version"></a>
-<!-- @format -->
-
-# Web
-
-Version both works to show you in your console what you're working on and synch you package.json with your env files (mostly to show some python proficiency).
-
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first
-to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
-
-## Contact
-
-junk-relay@jessejamesrichard.com
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
-
-#
-<a name="web"></a>
-<!-- @format -->
-
-# Web
-
-Web is a simple website so you can see how I work.
-
-## Installation
-
-Well, I dunno if you need to install this, but if you do, I bet you know how.
-
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first
-to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
-
-## Contact
-
-junk-relay@jessejamesrichard.com
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
-
+Below, I've attached some explanatory images to highlight some of the functionality.

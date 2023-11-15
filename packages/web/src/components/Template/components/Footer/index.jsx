@@ -10,6 +10,7 @@ import React from "react";
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
 	"&": {
 		backgroundColor: theme.palette.mode == "light" ? "#FEFEFE" : "#121212",
+		color: theme.palette.mode == "light" ? "#121212" : "#FEFEFE",
 	},
 }));
 
@@ -60,7 +61,7 @@ const FooterBar = () => {
 					color="inherit"
 					sx={{ padding: "12px", fontSize: "10px", textAlign: "center" }}
 				>
-					© {new Date().getFullYear()} jessejamesrichard.com ({t("notReally")})
+					{new Date().getFullYear()} - jessejamesrichard.com
 				</Typography>
 			</StyledAppBar>
 		</Box>

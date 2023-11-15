@@ -1,20 +1,21 @@
 /** @format */
 
-import { AppBar, Avatar, Box, Toolbar, styled, useMediaQuery, useTheme } from "@mui/material";
+import { AppBar, Avatar, Box, Hidden, Toolbar, styled, useMediaQuery, useTheme } from "@mui/material";
+import { Menu as LocalesMenu, useLocales } from "locales";
 import React from "react";
 import { Link } from "react-router-dom";
-
-import { Menu as LocalesMenu, useLocales } from "locales";
-
+import JessesAvatar from "./assets/images/avatar.png";
+import Contact from "./components/Contact";
 import DarkMode from "./components/DarkMode";
-import What from "./components/What";
 
+// Style the toolbar
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 	"&": {
-		backgroundColor: theme.palette.mode == "dark" ? "#272727" : "#d4d4d4",
+		backgroundColor: theme.palette.mode == "dark" ? "#272727" : "#FAFAFA",
 	},
 }));
 
+// Stle the links
 const StyledLink = styled(Link)(({ theme }) => ({
 	"&": {
 		color: theme.palette.mode == "dark" ? "#FEFEFE" : "#121212",
@@ -33,16 +34,18 @@ const TopBar = () => {
 			<StyledToolbar>
 				<Box sx={{ flexGrow: 1 }}>
 					<Link to="/">
-						<Avatar src="https://avatars.githubusercontent.com/u/13437954?v=4" variant="rounded" />
+						<Avatar src={JessesAvatar} variant="rounded" />
 					</Link>
 				</Box>
-				<What isSmallScreen={isSmallScreen} />
-				<StyledLink to="/about" color="inherit">
-					{t(isSmallScreen ? "who" : "topbarAbout")}
-				</StyledLink>
-				<StyledLink to="/cv" color="inherit">
+				<StyledLink to="/cv" color="inherit" sx={{ fontWeight: "bold" }}>
 					{t("topBarCV")}
 				</StyledLink>
+				<Hidden smDown>
+					<StyledLink to="/about" color="inherit">
+						{t("topbarAbout")}
+					</StyledLink>
+				</Hidden>
+				<Contact isSmallScreen={isSmallScreen} />
 				{!isSmallScreen && (
 					<LocalesMenu sx={{ paddingRight: "10px", color: palette.mode == "dark" ? "#FFFFFF" : "#121212" }} />
 				)}

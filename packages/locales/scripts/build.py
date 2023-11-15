@@ -63,7 +63,7 @@ async def main():
 
         # Collect data
         configs = [
-            f for f in glob.glob("**/.locales/{}.json".format(authority), recursive=True)
+            f for f in glob.glob("**/web/**/.locales/{}.json".format(authority), recursive=True)
             if not (f.startswith('functions') or ('node_modules' in f and 'madelive-' not in f))
         ]
         locales = {}

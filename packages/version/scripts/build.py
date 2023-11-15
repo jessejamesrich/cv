@@ -5,6 +5,8 @@ import re
 package_json_path = "package.json"
 env_file_path = ".env"
 
+print("-------UPDATING FRONTEND VERSION--------")
+
 # Read package.json to get the version
 with open(package_json_path, 'r') as f:
     package_data = json.load(f)
