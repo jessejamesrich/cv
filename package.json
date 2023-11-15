@@ -11,17 +11,25 @@
 		"@mui/material": "^5.14.9",
 		"@testing-library/react": "^14.0.0",
 		"@vitejs/plugin-react": "^4.0.4",
+		"axios": "^1.5.0",
 		"firebase": "^10.4.0",
 		"happy-dom": "^11.0.6",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
+		"react-markdown": "^8.0.7",
+		"react-player": "^2.13.0",
 		"react-router-dom": "^6.16.0",
+		"react-simple-typewriter": "^5.0.1",
+		"react-ts-typewriter": "^0.1.8-b",
 		"set-value": "^4.1.0",
-		"update": "^0.7.4"
+		"showdown": "^2.1.0",
+		"update": "^0.7.4",
+		"vite-bundle-visualizer": "^0.11.0"
 	},
 	"description": "",
 	"devDependencies": {
 		"vite": "^4.4.9",
+		"vite-plugin-markdown": "^2.1.0",
 		"vitest": "^0.34.4"
 	},
 	"keywords": [],
@@ -38,7 +46,8 @@
 		"serve:development": "python3 scripts/serve.py development",
 		"serve:production": "python3 scripts/serve.py production",
 		"test": "vitest",
-		"version": "python3 packages/version/scripts/build.py"
+		"version": "python3 packages/version/scripts/build.py",
+		"visualize": "vite build && npx vite-bundle-visualizer"
 	},
 	"type": "module",
 	"version": "1.0.0",

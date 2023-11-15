@@ -6,7 +6,7 @@
 	"main": "src/index.js",
 	"name": "firemade",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "vitest"
 	},
 	"version": "1.0.0"
 }

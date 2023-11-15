@@ -19,6 +19,7 @@
 	"private": true,
 	"scripts": {
 		"deploy": "firebase deploy --only functions",
+		"depoy": "npm run build && firebase deploy --only functions",
 		"lint": "eslint .",
 		"logs": "firebase functions:log",
 		"serve": "firebase emulators:start --only functions",

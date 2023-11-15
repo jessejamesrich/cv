@@ -1,12 +1,13 @@
 /** @format */
 
-import { AppBar, Toolbar, Typography, styled, useTheme } from "@mui/material";
+import { AppBar, Avatar, Box, Toolbar, styled, useMediaQuery, useTheme } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
 
 import { Menu as LocalesMenu, useLocales } from "locales";
 
 import DarkMode from "./components/DarkMode";
+import What from "./components/What";
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 	"&": {
@@ -22,26 +23,29 @@ const StyledLink = styled(Link)(({ theme }) => ({
 	},
 }));
 
-const TopBar = ({ title }) => {
+const TopBar = () => {
 	const { t } = useLocales();
 	const { palette } = useTheme();
+	const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down("sm"));
 
 	return (
 		<AppBar position="static">
 			<StyledToolbar>
-				<Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-					{title}
-				</Typography>
-				<StyledLink to="/" color="inherit">
-					{t("topbarHome")}
-				</StyledLink>
+				<Box sx={{ flexGrow: 1 }}>
+					<Link to="/">
+						<Avatar src="https://avatars.githubusercontent.com/u/13437954?v=4" variant="rounded" />
+					</Link>
+				</Box>
+				<What isSmallScreen={isSmallScreen} />
 				<StyledLink to="/about" color="inherit">
-					{t("topbarAbout")}
+					{t(isSmallScreen ? "who" : "topbarAbout")}
 				</StyledLink>
 				<StyledLink to="/cv" color="inherit">
 					{t("topBarCV")}
 				</StyledLink>
-				<LocalesMenu sx={{ paddingRight: "10px", color: palette.mode == "dark" ? "#FFFFFF" : "#121212" }} />
+				{!isSmallScreen && (
+					<LocalesMenu sx={{ paddingRight: "10px", color: palette.mode == "dark" ? "#FFFFFF" : "#121212" }} />
+				)}
 				<DarkMode />
 			</StyledToolbar>
 		</AppBar>

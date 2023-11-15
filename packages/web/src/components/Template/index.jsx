@@ -12,7 +12,7 @@ export default function ({ children }) {
 	return (
 		<Box>
 			<TopBar title={t("topbarTitle")} />
-			<Container sx={{ padding: "40px 0px", margin: "0px 20px" }}>{children}</Container>
+			<Container sx={{ marginBottom: "300px" }}>{children}</Container>
 			<Footer />
 		</Box>
 	);

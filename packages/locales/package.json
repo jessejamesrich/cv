@@ -1,20 +1,20 @@
 {
-  "author": "@jessejamesrich",
-  "dependencies": {
-    "i18next": "^22.5.1",
-    "react-i18next": "^12.3.1"
-  },
-  "description": "A i18n adapter for React",
-  "files": [
-    "src/",
-    "scripts/"
-  ],
-  "keywords": [],
-  "license": "ISC",
-  "main": "src/index.jsx",
-  "name": "locales",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "version": "1.0.1"
+	"author": "jessejamesrich",
+	"dependencies": {
+		"i18next": "^22.5.1",
+		"react-i18next": "^12.3.1"
+	},
+	"description": "A i18n adapter for React",
+	"files": [
+		"src/",
+		"scripts/"
+	],
+	"keywords": [],
+	"license": "ISC",
+	"main": "src/index.jsx",
+	"name": "locales",
+	"scripts": {
+		"test": "vitest"
+	},
+	"version": "1.0.1"
 }
