@@ -1,15 +1,20 @@
 /** @format */
-import { Box, Divider, useTheme } from "@mui/material";
+import { Box, Button, Divider, useTheme } from "@mui/material";
 import axios from "axios";
 import { useLocales } from "locales";
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
-import ContactCard from "../../../ContactCard";
+import { useUI } from "ui";
+
+// Get the contact card
+import ContactCard from "@Blocks/ContactCard";
 
 export default function CV() {
 	const { palette } = useTheme();
 	const [markdown, setMarkdown] = useState("");
 	const { locale } = useLocales();
+	const { dialog } = useUI();
+	const { t } = useLocales();
 
 	// Load the markdown from the backend as an example
 	useEffect(() => {
@@ -42,6 +47,18 @@ export default function CV() {
 					<ReactMarkdown>{markdown}</ReactMarkdown>
 				</Box>
 			)}
+
+			<Box
+				sx={{
+					marginTop: 5,
+					display: "flex",
+					justifyContent: "space-around",
+				}}
+			>
+				<Button onClick={() => dialog.open("what")} variant="contained" size="large" color="success">
+					{t("hireShort")}
+				</Button>
+			</Box>
 		</>
 	);
 }

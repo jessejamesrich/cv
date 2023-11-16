@@ -1,10 +1,12 @@
 /** @format */
-import { Box, Button } from "@mui/material";
+import { Box, Button, Divider } from "@mui/material";
 import Cookies from "js-cookie";
 import { useLocales } from "locales";
 import { useEffect, useState } from "react";
 import Typewriter from "react-ts-typewriter";
-import Video from "./components/Video";
+
+// Get the video
+import Video from "@Blocks/Video";
 
 export default function Home() {
 	// show the continue buttons when showVideo
@@ -19,16 +21,13 @@ export default function Home() {
 	// impor the localization complonent
 	const { t } = useLocales();
 
-	// Remove this after testing
-	const debug = false;
-
 	// Check if the cookie exists when the component mounts
 	useEffect(() => {
 		// Check the cookie
 		const hasSeenVideo = Cookies.get("hasSeenVideo");
 
 		// If they're already seen the video, show it but don't play it
-		if (hasSeenVideo && debug) {
+		if (hasSeenVideo) {
 			// Don't play it
 			setPlaying(false);
 
@@ -36,7 +35,7 @@ export default function Home() {
 			setFinishedText(true);
 
 			// Show the non-play video
-			setShowVideo(false);
+			setShowVideo(true);
 		}
 	}, []);
 
@@ -81,7 +80,11 @@ export default function Home() {
 					</Box>
 				</Box>
 			) : (
-				<Video playing={playing} />
+				<>
+					<Video playing={playing} />
+					<Divider sx={{ margin: "5%" }} />
+					<Box sx={{ padding: "0 5%" }}>{t("videoIntro")}</Box>
+				</>
 			)}
 		</>
 	);

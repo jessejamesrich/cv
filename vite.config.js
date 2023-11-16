@@ -23,6 +23,13 @@ export default defineConfig(() => {
 		base: "/",
 		clearScreen: true,
 		plugins: [react()],
+		resolve: {
+			alias: {
+				"@Blocks": path.resolve(__dirname, "./packages/web/src/components/Blocks/components"),
+				"@Pages": path.resolve(__dirname, "./packages/web/src/components/Pages/components"),
+				"@Templates": path.resolve(__dirname, "./packages/web/src/components/Templates/components"),
+			},
+		},
 		serve: {
 			port: 8055,
 			https: {

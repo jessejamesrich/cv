@@ -23,7 +23,7 @@ const DialogComponent = (props) => {
 							variant="contained"
 							color="error"
 						>
-							{t("cancel")}
+							{t(cancel)}
 						</Button>
 					)}
 					{confirm && (
@@ -33,7 +33,7 @@ const DialogComponent = (props) => {
 							variant="contained"
 							autoFocus
 						>
-							{t("continue")}
+							{t("close")}
 						</Button>
 					)}
 				</DialogActions>
