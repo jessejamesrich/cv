@@ -9,6 +9,9 @@ import { useUI } from "ui";
 // Get the contact card
 import ContactCard from "@Blocks/ContactCard";
 
+// Get the carousel of skills
+import Skills from "@Blocks/Skills";
+
 export default function CV() {
 	const { palette } = useTheme();
 	const [markdown, setMarkdown] = useState("");
@@ -34,6 +37,10 @@ export default function CV() {
 			<ContactCard size="large" />
 
 			<Divider />
+
+			<Box sx={{ margin: "10px 0" }}>
+				<Skills />
+			</Box>
 
 			{markdown && (
 				<Box

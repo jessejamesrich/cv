@@ -1,12 +1,14 @@
 /** @format */
 
-import { AppBar, Avatar, Box, Hidden, Toolbar, styled, useMediaQuery, useTheme } from "@mui/material";
+import { AppBar, Box, Hidden, Toolbar, styled, useMediaQuery, useTheme } from "@mui/material";
 import { Menu as LocalesMenu, useLocales } from "locales";
 import React from "react";
 import { Link } from "react-router-dom";
-import JessesAvatar from "./assets/images/avatar.png";
 import Contact from "./components/Contact";
 import DarkMode from "./components/DarkMode";
+
+// import JessesAvatar from "./assets/images/avatar.png";
+import Logo from "./assets/images/logo.png";
 
 // Style the toolbar
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
@@ -34,7 +36,8 @@ const TopBar = () => {
 			<StyledToolbar>
 				<Box sx={{ flexGrow: 1 }}>
 					<Link to="/">
-						<Avatar src={JessesAvatar} variant="rounded" />
+						<Box component="img" src={Logo} alt="Logo" style={{ height: "40px" }} />
+						{/* <Avatar src={JessesAvatar} variant="rounded" /> */}
 					</Link>
 				</Box>
 				<StyledLink to="/cv" color="inherit" sx={{ fontWeight: "bold" }}>

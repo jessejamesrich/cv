@@ -55,7 +55,7 @@ export default function Home() {
 					{!finishedText ? (
 						<Typewriter
 							text={t("videoIntro")}
-							speed={10}
+							speed={1}
 							onFinished={() => setTimeout(() => handleVideoCompletion(true), 500)}
 						/>
 					) : (
